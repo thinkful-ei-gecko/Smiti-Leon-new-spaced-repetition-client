@@ -1,7 +1,7 @@
  {
  "version": 2,
- "name": "el-instrumental",
- "alias": "el-instrumental",
+ "name": "el-instrumento",
+ "alias": "el-instrumento",
  "routes": [
    {
      "src": "^/static/(.*)",
