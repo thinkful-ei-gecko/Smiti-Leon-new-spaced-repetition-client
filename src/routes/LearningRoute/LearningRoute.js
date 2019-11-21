@@ -43,6 +43,7 @@ class LearningRoute extends Component {
     await LanguageApiService.postGuess(this.state.answer)
      .then(res => {
        if(res.isCorrect){
+         console.log(res.totalScore);
          this.setState({
            correctAnswer: res.answer,
            wordCorrectCount: this.state.wordCorrectCount + 1,
@@ -51,7 +52,9 @@ class LearningRoute extends Component {
          })
        }
        else{
+        console.log(res.totalScore);
          this.setState({
+           totalScore: res.totalScore,
            correctAnswer: res.answer,
            wordIncorrectCount: this.state.wordIncorrectCount + 1,
            isCorrect: false
