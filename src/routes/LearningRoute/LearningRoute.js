@@ -89,8 +89,8 @@ class LearningRoute extends Component {
           <Label htmlFor="learn-guess-input">
             What's the translation for this word?
           </Label>
-          <Input type="text" name="learn-guess-input" id="learn-guess-input" onChange={(e) => this.setState({answer: e.currentTarget.value})} required/>  
-          <Button type="submit">Submit your answer</Button>
+          <Input aria-label="type your guess" type="text" name="learn-guess-input" id="learn-guess-input" onChange={(e) => this.setState({answer: e.currentTarget.value})} required/>  
+          <Button aria-label="submit your answer" type="submit">Submit your answer</Button>
         </form>
         )
       }
@@ -98,7 +98,7 @@ class LearningRoute extends Component {
       {
         return (
           <div>
-          <Button type="click" onClick = {this.handleNextButton}>Try another word!</Button>
+          <Button aria-label="try another word" type="click" onClick = {this.handleNextButton}>Try another word!</Button>
           </div>
         )
       }
