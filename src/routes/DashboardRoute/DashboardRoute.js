@@ -29,8 +29,10 @@ class DashboardRoute extends Component {
   async renderPracticeWordList() {
     await LanguageApiService.fetchWords()
       .then(res => {
+        console.log(res);
         UserContext.words = res.words;
         UserContext.language = res.language.name;
+        UserContext.totalScore = res.language.total_score;
   
       })
 
@@ -38,11 +40,13 @@ class DashboardRoute extends Component {
         this.setState({ error: res.error })
       });
       let language = UserContext.language;
+      let totalScore = UserContext.totalScore;
     let words = UserContext.words || [];
 
     this.setState(
       {
       language: language,
+      totalScore: totalScore,
       wordsDisplay: words.map(word => {
       let mapped = this.wordTableVocabularyWord(word.original, word.correct_count, word.incorrect_count);
       return mapped;
@@ -50,14 +54,7 @@ class DashboardRoute extends Component {
   }
 
   async componentDidMount() {
-    this.renderPracticeWordList();
-    const word = await LanguageApiService.fetchWordHead();
-    if(this.state.totalScore === 0){
-      this.setState({
-        totalScore: word.totalScore
-      })
-      
-    }
+    this.renderPracticeWordList();      
     
   }
 
@@ -69,10 +66,10 @@ class DashboardRoute extends Component {
      
       <section className="dashboard">
         <h2>{this.state.language}</h2>
-        <Link to={'/learn'}><button className="dash-button">Start practice</button></Link>
+        <Link to={'/learn'}><button className="dash-button">Start practicing</button></Link>
         <h2>Total correct answers: {this.state.totalScore}</h2>
         <div className="PracticeWordsList">
-        <h3>Words to Practice</h3>
+        <h3>Words to practice</h3>
         <div className="word-table">
           <ul className="word-card">
             {this.state.wordsDisplay}
