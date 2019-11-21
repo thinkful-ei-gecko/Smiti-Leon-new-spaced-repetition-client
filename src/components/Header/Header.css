@@ -10,6 +10,12 @@
     padding: 10px;
 }
 
+.display-user span {
+  background-color: #fff;
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid black;
+}
 
 .nav-link{
   text-decoration: none;
