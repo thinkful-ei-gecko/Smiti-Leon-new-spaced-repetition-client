@@ -134,13 +134,13 @@ class LearningRoute extends Component {
      </div> 
       return (
         <section>
-          <main role='main' className='card-container'>      
+          <div className='card-container'>      
             {cardhead}
             {this.displayForm()}
             <div className="DisplayScore"><p className="DisplayScore">Your total score is: {this.state.totalScore}</p></div>
             <p className="Correct-Count">You have answered this word correctly {this.state.wordCorrectCount} times.</p>
             <p className="Incorrect-Count">You have answered this word incorrectly {this.state.wordIncorrectCount} times.</p>       
-          </main>
+          </div>
         </section>
       );
     }
