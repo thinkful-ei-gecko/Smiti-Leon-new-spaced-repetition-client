@@ -1,7 +1,7 @@
  {
  "version": 2,
- "name": "CLIENT_PROJECT_NAME",
- "alias": "CLIENT_PROJECT_NAME",
+ "name": "el-instrumental",
+ "alias": "el-instrumental",
  "routes": [
    {
      "src": "^/static/(.*)",
