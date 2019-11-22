@@ -12,7 +12,7 @@
 #### Demo log in account
       
        username: admin
-       password: pass
+       password: Password1!
   
 
 ## Screeenshots 
