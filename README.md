@@ -10,10 +10,10 @@
 [Server Repo](https://github.com/thinkful-ei-gecko/Smiti-Leon-Spaced-Repetion-Server)
 
 #### Demo log in account
-      ```
+      
        username: admin
        password: pass
-      ```
+  
 
 ## Summary
 
