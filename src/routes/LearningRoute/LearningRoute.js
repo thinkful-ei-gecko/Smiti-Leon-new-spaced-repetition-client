@@ -30,6 +30,8 @@ class LearningRoute extends Component {
           lastWord: res.nextWord,
           wordCorrectCount: res.wordCorrectCount,
           wordIncorrectCount: res.wordIncorrectCount,
+          nextWordCorrectCount: res.wordCorrectCount,
+          nextWordIncorrectCount: res.wordIncorrectCount,
           totalScore: res.totalScore
         })
       })
@@ -48,6 +50,8 @@ class LearningRoute extends Component {
          this.setState({
            correctAnswer: res.answer,
            wordCorrectCount: this.state.wordCorrectCount + 1,
+           nextWordCorrectCount: res.wordCorrectCount,
+           nextWordIncorrectCount: res.wordIncorrectCount,
            totalScore: res.totalScore,
            isCorrect: true,
            nextWord: res.nextWord
@@ -58,6 +62,8 @@ class LearningRoute extends Component {
            totalScore: res.totalScore,
            correctAnswer: res.answer,
            wordIncorrectCount: this.state.wordIncorrectCount + 1,
+           nextWordCorrectCount: res.wordCorrectCount,
+           nextWordIncorrectCount: res.wordIncorrectCount,
            isCorrect: false,
            nextWord: res.nextWord
          })
@@ -71,7 +77,7 @@ class LearningRoute extends Component {
 
   handleNextButton = e => {
     e.preventDefault();
-    this.setState({guessAnswer: false, isCorrect: false, currentWord: this.state.nextWord})
+    this.setState({guessAnswer: false, isCorrect: false, currentWord: this.state.nextWord, wordCorrectCount: this.state.nextWordCorrectCount, wordIncorrectCount: this.state.nextWordIncorrectCount})
     // LanguageApiService.fetchWordHead()
     //  .then(res => {
     //    this.setState({
@@ -128,6 +134,7 @@ class LearningRoute extends Component {
   }
 
   render() {
+    console.log(this.state);
     let cardhead = (this.state.guessAnswer) ?
       <div className="result-content">
         {this.displayResult()} 
