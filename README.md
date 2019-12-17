@@ -5,14 +5,14 @@
 
 ## Links
 
-- Link to live app: [Live Version](https://newest-spaced-rep-client.now.sh/) 
+- Link to live app: [Live Version](https://client.ldail.now.sh/) 
 - Link to client repo: [Client Repo](https://github.com/thinkful-ei-gecko/Smiti-Leon-new-spaced-repetition-client)
 - Link to API repo: [Server Repo](https://github.com/thinkful-ei-gecko/Smiti-Leon-Spaced-Repetion-Server)
 
 #### Demo log in account
       
        username: admin
-       password: pass
+       password: Password1!
   
 
 ## Screeenshots 
