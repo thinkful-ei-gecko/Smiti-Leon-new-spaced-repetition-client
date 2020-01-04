@@ -15,7 +15,7 @@ a{
 }
 
 
-@media screen and (min-width: 730px){
+@media screen and (min-width: 768px){
     .signup-form{
         margin: auto;
         max-width: 550px;
