@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
-
 * {
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 
@@ -12,7 +11,8 @@ body {
   font-family: "Ubuntu", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('/background-image.jpeg');
+  background-image: url('/background-image.jpg');
+  background-size: 150vw;
 }
 
 :root {
